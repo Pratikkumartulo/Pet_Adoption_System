@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pet registration </title>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #06D001;
+    }
+
+    header {
+            background-color: white;
+            color: black;
+            padding: 1px;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Anek Devanagari";
+        }
+
+    main {
+        max-width: 550px;
+        margin: 20px auto;
+        padding: 20px;
+        background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background: radial-gradient(circle at 10% 20%, rgb(221, 49, 49) 0%, rgb(119, 0, 0) 90%);
+    }
+</style>
+
+<body>
+    <header>
+        <b><h1>Pet Adoption Platform</h1></b>
+        
+    </header>
+<main>
+    <form id="registration-form" method="POST" action="/registeruser">
+        <h2>Register Here..!</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" name="password">
+        </div>
+        <button type="submit">Register</button>
+
+        <div id="success-message" style="display: none; color: rgb(0, 0, 0); margin-top: 10px;">
+            Registration successful! Thank you for registering.
+        </div>
+    </form>
+    
+</main>
+</body>
+</html>
